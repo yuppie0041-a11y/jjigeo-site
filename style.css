@@ -1,0 +1,51 @@
+/* 찍어 정적 페이지 공통 스타일.
+ * 스토어 등록에 필요한 페이지(개인정보처리방침, 지원)만 있다.
+ * 빌드 도구 없이 파일을 그대로 올린다. */
+
+:root { color-scheme: light dark; }
+
+body {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+  font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: #1f2a27;
+  background: #faf9f3;
+}
+
+/* 앱의 머리말처럼 제목 아래에 청록 띠를 둔다(2026-11-10 디자인). */
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: .25rem;
+  padding-bottom: .5rem;
+  border-bottom: 4px solid #1a6e5e;
+}
+h2 { font-size: 1.1rem; margin-top: 2.25rem; }
+
+.updated { color: #66706b; font-size: .9rem; margin-top: 0; }
+
+/* 페이지에서 가장 중요한 한 문단. 여기만 읽어도 요지를 알 수 있게 한다. */
+.lead {
+  background: #e3f2ee;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid #dcdcd4; vertical-align: top; }
+th { width: 34%; font-weight: 600; }
+
+footer { margin-top: 3rem; color: #66706b; font-size: .9rem; }
+
+a { color: #1a6e5e; }
+
+@media (prefers-color-scheme: dark) {
+  body { color: #e6e7e3; background: #121614; }
+  h1 { border-bottom-color: #8fd3c1; }
+  .lead { background: #1b2b27; }
+  th, td { border-bottom-color: #2c2e2b; }
+  .updated, footer { color: #a9ada8; }
+  a { color: #8fd3c1; }
+}
